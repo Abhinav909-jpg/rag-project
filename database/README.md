@@ -10,26 +10,26 @@ Unlike keyword search, vector similarity search can identify semantically relate
 ## 2. Why ChromaDB?
 For this project, we have selected ChromaDB as the initial vector store.
 It is not universally better than the alternatives. It is our current choice because its features and setup requirements suit the size and learning objectives of this project. Also:
-` - Easy integration: A straightforward Python API for our RAG pipeline.
-` - Local persistence: Store and reuse vectors locally without setting up a remote service.
-` - Simple setup: Quickly experiment with document embeddings and similarity search.
+- Easy integration: A straightforward Python API for our RAG pipeline.
+- - Local persistence: Store and reuse vectors locally without setting up a remote service.
+- Simple setup: Quickly experiment with document embeddings and similarity search.
 
 ## 3. Understanding ChromaDB
 ChromaDB is an open-source vector database for AI applications. Its main functionality includes storing embeddings, retrieving similar records, and filtering results using metadata.
 
 ### 3.1 How ChromaDB Fits into Our Pipeline
 
-#### ` - Document ingestion
-` - The pipeline loads documents and splits them into chunks.
-` - The embedding model converts each chunk into a vector.
-` - ChromaDB stores the vectors, text, IDs, and metadata.
+#### - Document ingestion
+- The pipeline loads documents and splits them into chunks.
+- The embedding model converts each chunk into a vector.
+- ChromaDB stores the vectors, text, IDs, and metadata.
 
-#### ` - Query retrieval
-` - A user submits a question.
-` - The query is converted into an embedding using a compatible embedding model.
-` - ChromaDB searches for similar stored vectors and returns the top-k relevant records.
-` - The retrieved text and metadata are passed back to the RAG pipeline.
-` - The pipeline supplies the retrieved context to the language model for answer generation.
+#### - Query retrieval
+- A user submits a question.
+- The query is converted into an embedding using a compatible embedding model.
+- ChromaDB searches for similar stored vectors and returns the top-k relevant records.
+- The retrieved text and metadata are passed back to the RAG pipeline.
+- The pipeline supplies the retrieved context to the language model for answer generation.
 
 ChromaDB handles vector storage and retrieval; the language model generates the final answer.
 
@@ -42,10 +42,10 @@ pip install chromadb
 ## 4. Database Module Responsibilities
 
 This module will handle:
-` - ChromaDB initialization and collection management.
-` - Storage of document chunks, embeddings, IDs, and metadata.
-` - Vector similarity search and metadata filtering.
-` - Persistent local storage.
-` - Integration with the pipeline module.
-` - Testing retrieval quality with sample queries.
+- ChromaDB initialization and collection management.
+- Storage of document chunks, embeddings, IDs, and metadata.
+- Vector similarity search and metadata filtering.
+- Persistent local storage.
+- Integration with the pipeline module.
+- Testing retrieval quality with sample queries.
 
