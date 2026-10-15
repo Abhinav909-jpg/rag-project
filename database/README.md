@@ -11,7 +11,7 @@ Unlike keyword search, vector similarity search can identify semantically relate
 For this project, we have selected ChromaDB as the initial vector store.
 It is not universally better than the alternatives. It is our current choice because its features and setup requirements suit the size and learning objectives of this project. Also:
 - Easy integration: A straightforward Python API for our RAG pipeline.
-- - Local persistence: Store and reuse vectors locally without setting up a remote service.
+- Local persistence: Store and reuse vectors locally without setting up a remote service.
 - Simple setup: Quickly experiment with document embeddings and similarity search.
 
 ## 3. Understanding ChromaDB
